@@ -1,2 +1,2 @@
-# ilanobrega_luizacode
-repositório de teste para luiza code
+# luizacode
+Repositório de acompanhamento do Bootcamp em Python.
