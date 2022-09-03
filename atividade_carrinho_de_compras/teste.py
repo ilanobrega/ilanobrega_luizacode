@@ -19,12 +19,26 @@ print(new_lista)
 new_list = [item for item in carts if item[0] == '123'] #item na primeira posição é o que será retornado
 print(new_list[0]) #no método acima, a lista criada acessa uma sublista então é uma lista com sublista
 # assim vc acessa a lista no índice 0, que é a sublista e retorna a lista sozinha
+jd_produto = '123'
+n_list = filter(lambda elem: elem[0] == '123', carts)
+
+#Encapsulamento de função
+def get_item_id(produto):
+    def filtra_item(item):
+        if item[0] == produto:
+           return item
+    n_list = filter(filtra_item, carts)
+    print(list(n_list))
+    
+get_item_id('123')
+
         
-def filtra_item(item, product):
-    if item[0] == '123':
-        return item
+# def filtra_item(item, product):
+#     if item[0] == '123':
+#         return item
     
 # n_list = filter(lambda seq: filtra_item(seq, '123'), carts)
 
-n_list = filter(lambda seq: filtra_item(seq, '123'), carts)
-print(list(n_list))
+# n_list = filter(lambda elem: elem[0] == '123', carts)
+# n_list = filter(lambda seq: filtra_item(seq, '123'), carts)
+# print(list(n_list))
